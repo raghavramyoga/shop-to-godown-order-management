@@ -1,9 +1,12 @@
 import { NavLink, useNavigate } from 'react-router-dom'
-import { LayoutDashboard, Package, Warehouse, LogOut } from 'lucide-react'
+// LayoutDashboard kept for future Dashboard menu re-enable
+// import { LayoutDashboard, Package, Warehouse, LogOut } from 'lucide-react'
+import { Package, Warehouse, LogOut } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 
 const navItems = [
-  { to: '/admin', label: 'Dashboard', icon: LayoutDashboard, end: true },
+  // Hidden for now — uncomment to re-enable Dashboard
+  // { to: '/admin', label: 'Dashboard', icon: LayoutDashboard, end: true },
   { to: '/admin/products', label: 'Products', icon: Package },
 ]
 
@@ -41,11 +44,10 @@ export default function Sidebar({ onNavigate }: Props) {
       </div>
 
       <nav className="relative z-10 flex-1 px-3 py-4 space-y-1.5 overflow-y-auto">
-        {navItems.map(({ to, label, icon: Icon, end }) => (
+        {navItems.map(({ to, label, icon: Icon }) => (
           <NavLink
             key={to}
             to={to}
-            end={end}
             onClick={() => onNavigate?.()}
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-all ${

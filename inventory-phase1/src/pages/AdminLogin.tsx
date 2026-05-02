@@ -14,7 +14,7 @@ export default function AdminLogin() {
     e.preventDefault()
     setError(null)
     if (login(username, password)) {
-      navigate('/admin')
+      navigate('/admin/products')
     } else {
       setError('Invalid admin credentials')
     }
@@ -70,6 +70,7 @@ export default function AdminLogin() {
                 style={{ backgroundColor: 'rgba(255, 255, 255, 0.85)' }}
                 required
                 autoComplete="username"
+                autoFocus
               />
             </div>
 

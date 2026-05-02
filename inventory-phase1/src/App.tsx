@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { ThemeProvider, CssBaseline } from '@mui/material'
 
 import { AppProvider } from './context/AppContext'
@@ -7,7 +7,8 @@ import { theme } from './theme'
 import Layout from './components/Layout'
 import Landing from './pages/Landing'
 import AdminLogin from './pages/AdminLogin'
-import Dashboard from './pages/Dashboard'
+// Dashboard hidden for now — uncomment to re-enable along with the index route below and the Sidebar entry.
+// import Dashboard from './pages/Dashboard'
 import Products from './pages/Products'
 
 function App() {
@@ -20,7 +21,9 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="/admin/login" element={<AdminLogin />} />
             <Route path="/admin" element={<Layout />}>
-              <Route index element={<Dashboard />} />
+              {/* Default landing inside /admin redirects to Products. Restore Dashboard by uncommenting. */}
+              <Route index element={<Navigate to="products" replace />} />
+              {/* <Route index element={<Dashboard />} /> */}
               <Route path="products" element={<Products />} />
             </Route>
           </Routes>
