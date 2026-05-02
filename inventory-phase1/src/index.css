@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: #9EB1C5;
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(255, 240, 220, 0.85), transparent 55%),
+    linear-gradient(135deg, #B0BFD0, #94A6BA);
+  background-attachment: fixed;
+  color: #1E293B;
+  min-height: 100vh;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+h1 { font-weight: 700; }
+
+.font-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+  letter-spacing: 0;
+  font-weight: 400;
+}
