@@ -3,14 +3,14 @@ import { createTheme } from '@mui/material/styles'
 export const theme = createTheme({
   palette: {
     mode: 'light',
-    primary: { main: '#FFD54F', light: '#FFE082', dark: '#FFC107', contrastText: '#3E2723' },
-    secondary: { main: '#6D4C41', light: '#8D6E63', dark: '#4E342E', contrastText: '#FFF8E1' },
+    primary: { main: '#1F1F1F', light: '#3D3D3D', dark: '#0A0A0A', contrastText: '#FCD835' },
+    secondary: { main: '#FCD835', light: '#FFE57E', dark: '#E8C200', contrastText: '#1F1F1F' },
     error: { main: '#C62828' },
     warning: { main: '#FFA000' },
     success: { main: '#2E7D32' },
     info: { main: '#0277BD' },
-    background: { default: 'rgba(255, 248, 225, 0)', paper: 'rgba(255, 255, 255, 0.88)' },
-    text: { primary: '#3E2723', secondary: '#6D4C41' },
+    background: { default: 'rgba(255, 248, 220, 0)', paper: '#FFFFFF' },
+    text: { primary: '#1F1F1F', secondary: '#3D3D3D' },
   },
   typography: {
     fontFamily: '"Plus Jakarta Sans", system-ui, -apple-system, sans-serif',
@@ -23,20 +23,16 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           backgroundImage: 'none',
-          backgroundColor: 'rgba(255, 255, 255, 0.6)',
-          backdropFilter: 'blur(24px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-          border: '1px solid rgba(255, 255, 255, 0.5)',
-          boxShadow: '0 16px 40px -10px rgba(30, 41, 59, 0.18)',
+          backgroundColor: '#FFFFFF',
         },
       },
     },
     MuiDialog: {
       styleOverrides: {
         paper: {
-          backgroundColor: 'rgba(255, 255, 255, 0.75)',
-          backdropFilter: 'blur(28px) saturate(180%)',
-          WebkitBackdropFilter: 'blur(28px) saturate(180%)',
+          backgroundColor: '#FFFFFF',
+          border: '2px solid #1F1F1F',
+          boxShadow: '8px 8px 0 0 #FCD835',
         },
       },
     },
@@ -52,7 +48,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#3E2723',
+            borderColor: '#1F1F1F',
             borderWidth: '2px',
           },
         },
@@ -62,7 +58,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           '&.Mui-focused': {
-            color: '#3E2723',
+            color: '#1F1F1F',
           },
         },
       },

@@ -30,17 +30,16 @@ export default function Layout() {
 
       <div className="flex-1 flex flex-col min-w-0">
         <header
-          className="px-3 sm:px-6 py-3 flex items-center gap-2 sm:gap-3 sticky top-0 z-10 border-b border-white/40"
+          className="px-3 sm:px-6 py-3 flex items-center gap-2 sm:gap-3 sticky top-0 z-10"
           style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.55)',
-            backdropFilter: 'blur(24px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-            boxShadow: '0 4px 24px -4px rgba(30, 41, 59, 0.15)',
+            backgroundColor: '#FFFFFF',
+            borderBottom: '3px solid #FCD835',
+            boxShadow: '0 4px 16px -4px rgba(31, 31, 31, 0.12)',
           }}
         >
           <IconButton
             onClick={() => setMobileOpen(true)}
-            sx={{ display: { lg: 'none' }, color: '#3E2723' }}
+            sx={{ display: { lg: 'none' }, color: '#1F1F1F' }}
             aria-label="Open menu"
           >
             <Menu className="w-5 h-5" />
@@ -48,18 +47,17 @@ export default function Layout() {
 
           <div className="ml-auto flex items-center gap-2 sm:gap-4 min-w-0">
             <button
-              className="relative p-2 rounded-lg flex-shrink-0 transition"
-              style={{ background: 'rgba(255, 255, 255, 0.4)' }}
+              className="relative p-2 rounded-lg flex-shrink-0 transition hover:bg-[#FCD835]/30"
               aria-label="Notifications"
             >
-              <Bell className="w-5 h-5 text-[#6D4C41]" />
+              <Bell className="w-5 h-5 text-[#1F1F1F]" />
               <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[#C62828] rounded-full" />
             </button>
-            <div className="text-sm text-[#5D4037] hidden xl:block truncate glass-title">
-              <span className="font-semibold text-[#3E2723]">Kovilpatti Murukku &amp; Snacks kadai</span> — Chennai
+            <div className="text-sm text-[#1F1F1F]/65 hidden xl:block truncate font-medium">
+              <span className="font-bold text-[#1F1F1F] uppercase tracking-wide">Kovilpatti Murukku &amp; Snacks</span> — Chennai
             </div>
-            <div className="text-sm text-[#5D4037] hidden md:block xl:hidden truncate">
-              <span className="font-semibold text-[#3E2723]">Chennai</span>
+            <div className="text-sm text-[#1F1F1F]/65 hidden md:block xl:hidden truncate font-medium">
+              <span className="font-bold text-[#1F1F1F] uppercase tracking-wide">Chennai</span>
             </div>
           </div>
         </header>

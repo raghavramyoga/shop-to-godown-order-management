@@ -35,21 +35,23 @@ export default function Dashboard() {
       <PageHeader title="Dashboard" subtitle="Overview of your product catalog" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <StatCard label="Total Products" value={totalProducts} icon={Package} iconColor="bg-[#FFE082] text-[#5D4037]" />
-        <StatCard label="Categories" value={categoriesCount} icon={Tags} iconColor="bg-[#FFD54F] text-[#3E2723]" />
+        <StatCard label="Total Products" value={totalProducts} icon={Package} iconColor="bg-[#FCD835] text-[#1F1F1F]" />
+        <StatCard label="Categories" value={categoriesCount} icon={Tags} iconColor="bg-[#1F1F1F] text-[#FCD835]" />
       </div>
 
       <Paper
         sx={{
           borderRadius: 2.5,
-          border: '1px solid rgba(255, 255, 255, 0.5)',
+          border: '2px solid #1F1F1F',
           overflow: 'hidden',
-          boxShadow: '0 12px 32px -8px rgba(62, 39, 35, 0.18)',
+          boxShadow: '6px 6px 0 0 #FCD835',
+          backgroundColor: '#FFFFFF',
+          backdropFilter: 'none',
         }}
         elevation={0}
       >
-        <Box sx={{ px: 2.5, py: 2, borderBottom: '1px solid rgba(255, 255, 255, 0.4)', bgcolor: 'rgba(255, 213, 79, 0.45)' }}>
-          <h2 className="font-semibold text-[#3E2723]">Recently Added Products</h2>
+        <Box sx={{ px: 2.5, py: 2, borderBottom: '2px solid #1F1F1F', bgcolor: '#FCD835' }}>
+          <h2 className="font-bold text-[#1F1F1F] uppercase tracking-wide">Recently Added Products</h2>
         </Box>
         <DataGrid
           rows={recentProducts}
@@ -60,12 +62,12 @@ export default function Dashboard() {
           autoHeight
           sx={{
             border: 0,
-            backgroundColor: 'rgba(255, 255, 255, 0)',
-            color: '#3E2723',
-            '& .MuiDataGrid-columnHeaders': { bgcolor: 'rgba(255, 255, 255, 0.45)', color: '#1E293B', fontWeight: 600 },
-            '& .MuiDataGrid-row': { bgcolor: 'rgba(255, 255, 255, 0.4)' },
-            '& .MuiDataGrid-row:hover': { bgcolor: 'rgba(255, 213, 79, 0.45)' },
-            '& .MuiDataGrid-cell': { borderColor: 'rgba(255, 255, 255, 0.3)' },
+            backgroundColor: '#FFFFFF',
+            color: '#1F1F1F',
+            '& .MuiDataGrid-columnHeaders': { bgcolor: '#FFF8DC', color: '#1F1F1F', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.7rem', borderBottom: '2px solid #1F1F1F' },
+            '& .MuiDataGrid-row': { bgcolor: '#FFFFFF' },
+            '& .MuiDataGrid-row:hover': { bgcolor: '#FFF8DC' },
+            '& .MuiDataGrid-cell': { borderColor: '#FFF1B3' },
             '& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within': { outline: 'none' },
             '& .MuiDataGrid-columnHeader:focus, & .MuiDataGrid-columnHeader:focus-within': { outline: 'none' },
           }}

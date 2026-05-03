@@ -54,7 +54,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
   const login = (username: string, password: string) => {
     if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
-      setCurrentUser({ username, fullName: 'Ramji' })
+      setCurrentUser({ username, fullName: username })
       return true
     }
     return false

@@ -12,12 +12,15 @@
 
 body {
   margin: 0;
-  background-color: #9EB1C5;
+  background-color: #FFF8DC;
   background-image:
-    radial-gradient(circle at 50% 50%, rgba(255, 240, 220, 0.85), transparent 55%),
-    linear-gradient(135deg, #B0BFD0, #94A6BA);
+    /* very subtle yellow + charcoal accents — like vintage wrapper paper */
+    radial-gradient(circle at 12% 18%, rgba(252, 216, 53, 0.25), transparent 50%),
+    radial-gradient(circle at 88% 80%, rgba(252, 216, 53, 0.2), transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5), transparent 60%),
+    linear-gradient(135deg, #FFF8DC, #FFF1B3);
   background-attachment: fixed;
-  color: #1E293B;
+  color: #1F1F1F;
   min-height: 100vh;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }

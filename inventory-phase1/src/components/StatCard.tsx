@@ -7,21 +7,19 @@ type Props = {
   iconColor?: string
 }
 
-export default function StatCard({ label, value, icon: Icon, iconColor = 'bg-[#FFE082] text-[#5D4037]' }: Props) {
+export default function StatCard({ label, value, icon: Icon, iconColor = 'bg-[#FCD835] text-[#1F1F1F]' }: Props) {
   return (
     <div
-      className="rounded-xl p-5 border border-white/40"
+      className="rounded-xl p-5 bg-white"
       style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.6)',
-        backdropFilter: 'blur(24px) saturate(180%)',
-        WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-        boxShadow: '0 12px 32px -8px rgba(30, 41, 59, 0.18)',
+        border: '2px solid #1F1F1F',
+        boxShadow: '4px 4px 0 0 #FCD835',
       }}
     >
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-sm text-[#5D4037]">{label}</p>
-          <p className="text-2xl font-semibold text-[#3E2723] mt-1">{value}</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-[#1F1F1F]/65">{label}</p>
+          <p className="text-3xl font-bold text-[#1F1F1F] mt-1">{value}</p>
         </div>
         <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${iconColor}`}>
           <Icon className="w-5 h-5" />

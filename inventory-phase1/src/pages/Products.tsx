@@ -79,9 +79,11 @@ export default function Products() {
       <Paper
         sx={{
           borderRadius: 2.5,
-          border: '1px solid rgba(255, 255, 255, 0.5)',
+          border: '2px solid #1F1F1F',
           overflow: 'hidden',
-          boxShadow: '0 12px 32px -8px rgba(62, 39, 35, 0.18)',
+          boxShadow: '6px 6px 0 0 #FCD835',
+          backgroundColor: '#FFFFFF',
+          backdropFilter: 'none',
         }}
         elevation={0}
       >
@@ -94,13 +96,13 @@ export default function Products() {
           pageSizeOptions={[10, 25, 50]}
           sx={{
             border: 0,
-            backgroundColor: 'rgba(255, 255, 255, 0)',
-            color: '#3E2723',
-            '& .MuiDataGrid-columnHeaders': { bgcolor: 'rgba(255, 213, 79, 0.5)', color: '#1E293B', fontWeight: 600 },
-            '& .MuiDataGrid-row': { bgcolor: 'rgba(255, 255, 255, 0.4)' },
-            '& .MuiDataGrid-row:hover': { bgcolor: 'rgba(255, 213, 79, 0.45)' },
-            '& .MuiDataGrid-cell': { borderColor: 'rgba(255, 255, 255, 0.3)' },
-            '& .MuiDataGrid-footerContainer': { bgcolor: 'rgba(255, 255, 255, 0.4)', borderColor: 'rgba(255, 255, 255, 0.3)' },
+            backgroundColor: '#FFFFFF',
+            color: '#1F1F1F',
+            '& .MuiDataGrid-columnHeaders': { bgcolor: '#FCD835', color: '#1F1F1F', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.7rem', borderBottom: '2px solid #1F1F1F' },
+            '& .MuiDataGrid-row': { bgcolor: '#FFFFFF' },
+            '& .MuiDataGrid-row:hover': { bgcolor: '#FFF8DC' },
+            '& .MuiDataGrid-cell': { borderColor: '#FFF1B3' },
+            '& .MuiDataGrid-footerContainer': { bgcolor: '#FFF8DC', borderTop: '2px solid #1F1F1F' },
             '& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within': { outline: 'none' },
             '& .MuiDataGrid-columnHeader:focus, & .MuiDataGrid-columnHeader:focus-within': { outline: 'none' },
           }}
